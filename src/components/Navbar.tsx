@@ -35,8 +35,9 @@ const TopNavbar: React.FC = () => {
             alt=""
             className="max-w-10 "
           />
+          {/* AHAHHAHAHAHAHAH */}
           <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">
-            5
+            6
           </span>
         </button>
         <div className="realtive">

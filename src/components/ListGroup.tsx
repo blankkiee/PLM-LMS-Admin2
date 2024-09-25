@@ -1,4 +1,5 @@
 import React from "react";
+import { FaPenAlt, FaRegEdit, FaTrash } from "react-icons/fa";
 
 const Content: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Content: React.FC = () => {
       <p className="text-gray-600 mb-2">Total: 21 results</p>
 
       {/* Faculty List */}
-      <div className="bg-white shadow-sm rounded-lg p-4">
+      <div className="bg-white shadow-sm rounded-lg p-4 max-h-svh  overflow-auto">
         <table className="min-w-full table-auto">
           <thead>
             <tr className="text-left bg-gray-100">
@@ -38,8 +39,8 @@ const Content: React.FC = () => {
           </thead>
           <tbody>
             {/* Placeholder for Data */}
-            {[...Array(10)].map((_, index) => (
-              <tr key={index} className="border-b">
+            {[...Array(40)].map((_, index) => (
+              <tr key={index} className="border-b ">
                 <td className="p-2 flex items-center space-x-2">
                   <img
                     src="https://via.placeholder.com/40"
@@ -51,9 +52,13 @@ const Content: React.FC = () => {
                 <td className="p-2">2020-12345</td>
                 <td className="p-2">Professor 1</td>
                 <td className="p-2">CISTM</td>
-                <td className="p-2 space-x-2">
-                  <button className="text-blue-500">✏️</button>
-                  <button className="text-red-500">🗑</button>
+                <td className="p-2 space-x-3">
+                  <button className="text-blue-500">
+                    <FaRegEdit className="h-6 w-6" />
+                  </button>
+                  <button className="text-red-500">
+                    <FaTrash className="h-6 w-5" />
+                  </button>
                 </td>
               </tr>
             ))}
